@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Dice</title>
+</head>
+<body>
+Hello! Input the following:
+<br/>
+<form action="#" th:action="@{/diceRoll}" th:object="${params}" method="GET">
+Dice Sides      : <input type="number" name="maxdice" th:field="*{maxdice}" min="4" required/><br/><br/>
+Number of Rolls : <input type="number" name="rollnum" th:field="*{rollnum}" min="1" required/><br/><br/>
+Number of Dice  : <input type="number" name="dicenum" th:field="*{dicenum}" min="1" required/><br/><br/>
+<button name="submit" type="submit" value="0">Roll!</button>
+</form>
+<br/>
+<br/>
+<br/>
+<br/>
+click here for classic. 3 Die, 100 Rolls, 6 Sides.
+<form action="#" th:action="@{/diceRollFixed}">
+<button name="submit" type="submit" value="0">Roll!</button>
+</form>
+</body>
+</html>
